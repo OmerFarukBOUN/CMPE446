@@ -1,0 +1,73 @@
+INFO: [HLS 200-10] Running '/home/omerfaruk/tools/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'omerfaruk' on host 'DarkChocolate' (Linux_x86_64 version 6.5.0-21-generic) on Wed Mar 06 08:00:01 +03 2024
+INFO: [HLS 200-10] On os Ubuntu 22.04.4 LTS
+INFO: [HLS 200-10] In directory '/home/omerfaruk/Projects/okul/denem6'
+INFO: [HLS 200-2053] The vitis_hls executable is being deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script '/home/omerfaruk/Projects/okul/denem6/denem6/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: source /home/omerfaruk/Projects/okul/denem6/denem6/solution1/csim.tcl
+INFO: [HLS 200-1510] Running: open_project denem6 
+INFO: [HLS 200-10] Opening project '/home/omerfaruk/Projects/okul/denem6/denem6'.
+INFO: [HLS 200-1510] Running: set_top hart 
+INFO: [HLS 200-1510] Running: add_files OP_AL_32I.cpp 
+INFO: [HLS 200-10] Adding design file 'OP_AL_32I.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files hart.cpp 
+INFO: [HLS 200-10] Adding design file 'hart.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files mem.cpp 
+INFO: [HLS 200-10] Adding design file 'mem.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files parameters.hpp 
+INFO: [HLS 200-10] Adding design file 'parameters.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb test_hart.cpp -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'test_hart.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/omerfaruk/Projects/okul/denem6/denem6/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvf1517-3-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_cosim -trace_level=port
+INFO: [HLS 200-1464] Running solution command: config_cosim -wave_debug=1
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvf1517-3-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim -trace_level port -wave_debug 
+INFO: [HLS 200-1510] Running: source ./denem6/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name hart hart 
+INFO: [HLS 200-1510] Running: csim_design -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../test_hart.cpp in debug mode
+   Compiling ../../../../OP_AL_32I.cpp in debug mode
+   Compiling ../../../../hart.cpp in debug mode
+   Compiling ../../../../mem.cpp in debug mode
+   Generating csim.exe
+0 0x500093
+4 0x700113
+8 0x208463
+c 0x108093
+10 0x500193
+14 0x500213
+18 0x419463
+1c 0x108093
+20 0x500293
+24 0x700313
+28 0x62c463
+30 0x700393
+34 0x500413
+38 0x083d463
+40 0x493
+44 -0xffaed
+48 0x0a4e463
+50 -0xffa6d
+54 0x613
+58 0x0c5f463
+60 0x500093
+64 0x0c000ef
+70 0x408167
+6c 0x08000ef
+74 0x10b7
+78 0x2097
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 6.16 seconds. CPU system time: 0.72 seconds. Elapsed time: 7.53 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 8.33 seconds. Total CPU system time: 1.15 seconds. Total elapsed time: 16.98 seconds; peak allocated memory: 232.793 MB.
